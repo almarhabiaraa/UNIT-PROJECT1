@@ -1,4 +1,4 @@
-#  UNIT-PROJECT-1 Happy Moments Planner 🎉
+# Happy Moments Planner 🎉
 
 ## Project Overview
 **Happy Moments Planner** is a role-based Command Line Interface (CLI) system designed to help clients and event organizers plan, manage, and organize events seamlessly.  
