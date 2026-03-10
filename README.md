@@ -1,44 +1,95 @@
-# UNIT-PROJECT-1
+#  UNIT-PROJECT-1 Happy Moments Planner 🎉
+
+## Project Overview
+**Happy Moments Planner** is a role-based Command Line Interface (CLI) system designed to help clients and event organizers plan, manage, and organize events seamlessly.  
+The system guides users step-by-step through the booking process, allowing them to select venues, catering, services, and more. All data is persistently stored in a SQLite database for reliability.  
+
+The system supports two main roles:  
+- **Client** – Can create and manage bookings.  
+- **Admin** – Can manage services, venues, catering menus, view reports, and oversee all bookings.  
+
+---
+
+## Project Structure
 
 
-## Based on what you’ve learned until now , create a project of your choosing (impress us with your imagination) . This project must at least satisfy the following minimum requirements :
+```
+HappyMomentsPlanner/
+│
+├─ cli/ # CLI interface for user interactions
+├─ database/ # Database connection and seed data
+├─ services/ # Business logic and service handlers
+├─ .gitignore # Git ignore file
+├─ README.md # Project documentation
+├─ main.py # Entry point for the CLI system
+├─ moments_planner.db # SQLite database file
+├─ requirements.txt # Python dependencies
+└─ .DS_Store
+```
 
-- Must be interactive on CLI.
-- Use your coding skills in Python accurately.
-- Organize Your Code into modules & (or packages)
-- Use git & Github to track changes in your code.
+---
 
-## Example Project :  An online Grocery Store :
+## Main Features
 
-#### Overview : An online store that sells fruits to customers. This online store has 2 main users. The customer and the manager of the store . Each one of them should be able to do the following tasks for the store to function properly . 
+- **User Authentication**
+  - Sign up and login with hashed passwords
+  - Role-based access (Client / Admin)
 
-### Features & User Stories
-#### As a customer I should be able to do the following :
-- Browse  Products . 
-- View the product info (summary, specs, price, quantity , etc.)
-- Search for Products.
-- Get recommendations for my next purchase based on my purchase history.
-- Add Products to the shopping cart .
-- Remove a product from the shopping cart.
-- List the products in my shopping cart. 
-- Continue to checkout . 
-- Fill in my address for delivery.
-- Get receipt of my purchases.
-- Check delivery status . 
+- **Event Booking Wizard**
+  - Step-by-step event booking for clients
+  - Select event type, category, venue, catering, cake, coffee corners, services, giveaways
+  - Real-time calculation of total price
 
+- **Admin Dashboard**
+  - Manage bookings, services, venues, and catering menus
+  - View detailed reports
+  - Update, add, or delete entries
 
+- **Database Integration**
+  - Persistent storage using SQLite
+  - Pre-populated seed data for services, venues, menus, and coffee corners
 
-#### Usage :
- Explain to the user how to use your project . 
- for example:
- - type in search product_name to search for a product.
- - type in list_products to show all the products in the grocery.
- - type in show product_name to get information about this product.
- - type in buy product_name to buy the product . 
- - and so on...
+---
+## User Stories
 
+- **As a Client**:
+  - I want to create a new booking for an event.
+  - I want to choose a venue, catering menu, and additional services.
+  - I want to see the total price as I select services.
+  - I want to see my previous bookings.
+  - I want to cancel any of my bookings.
+  - I want to delete my account.
 
-### For your project. Edit this README.md file to include your own project name,  overview, user stories, and usage. 
+- **As an Admin**:
+  - I want to manage available services, venues, and menus (CRUD: create, read, update, delete).
+  - I want to view all client bookings.
+  - I want to approve or reject a client booking.
+  - I want to generate simple reports on bookings and revenue.
+    
+ ---
 
-### NOTE: before submitting the final project, please do the following command:
-`pip freeze > requirements.txt` to enable use to know & use the packages used in your project.
+## Installation & Setup
+
+1. Clone the repository:
+
+```bash
+git clone <your-repo-url>
+cd HappyMomentsPlanner
+```
+
+2. Create a virtual environment and activate it:
+```bash
+python -m venv venv
+source venv/bin/activate   # Mac/Linux
+venv\Scripts\activate      # Windows
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+4. Run the application:
+```bash
+python main.py
+```
